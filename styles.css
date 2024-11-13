@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 80%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.visible {
+  opacity: 1; /* Make the body visible */
+  animation: slideIn 1s ease-in-out forwards; /* Apply the slide-in animation */
+}
+
+
+
+.calculator-container {
+  font-family: Arial, sans-serif;
+  background: hsl(0, 0%, 15%);
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.display {
+  width: 100%;
+  padding: 20px;
+  font-size: 5rem;
+  border: none;
+  text-align: left;
+  background-color:hsl(0, 0%, 20%);
+  color: white;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 30%);
+  cursor: pointer;
+  font-size: 3rem;
+  color: white;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+  transform: scale(0.9);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 50%);
+  transform: scale(0.9);
+}
+
+.operator-btn {
+  background-color: hsl(35,100%,55%);
+}
+
+.operator-btn:hover {
+  background-color: hsl(35,100%,65%);
+}
+
+.operator-btn:hover {
+  background-color: hsl(35,100%,75%);
+}
+
+
